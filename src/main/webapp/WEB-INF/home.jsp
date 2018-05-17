@@ -20,6 +20,8 @@
           apply the skin class to the body tag so the changes take effect. -->
     <link rel="stylesheet" href="static/dist/css/skins/skin-blue.min.css">
 
+    <link rel="stylesheet" href="static/bootstrap-table/dist/bootstrap-table.min.css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -356,6 +358,9 @@
 <script src="static/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
 <script src="static/dist/js/adminlte.min.js"></script>
+
+<script src="static/bootstrap-table/dist/bootstrap-table.min.js"></script>
+<script src="static/bootstrap-table/dist/locale/bootstrap-table-zh-CN.min.js"></script>
 
 <script>
 
