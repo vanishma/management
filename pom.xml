@@ -6,7 +6,7 @@
 	<groupId>com.maqh</groupId>
 	<artifactId>management</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>management</name>
 	<description>Demo project for Spring Boot</description>
@@ -58,7 +58,7 @@
 		</dependency>
 	</dependencies>
 
-	<build>
+    <build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -66,6 +66,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
 
 </project>
