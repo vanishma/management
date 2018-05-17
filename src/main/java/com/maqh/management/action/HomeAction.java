@@ -35,7 +35,7 @@ public class HomeAction {
 
         Map<String, Object> child2 = new HashMap<>();
         child2.put("url","/hello");
-        child2.put("menuName","客户2");
+        child2.put("menuName","客户2lsit");
         childArr.add(child2);
 
         menuList.add(map2);
