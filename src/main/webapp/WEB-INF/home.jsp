@@ -20,6 +20,7 @@
           apply the skin class to the body tag so the changes take effect. -->
     <link rel="stylesheet" href="static/dist/css/skins/skin-blue.min.css">
     <link rel="stylesheet" href="static/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+
     <link rel="stylesheet" href="static/bootstrap-table/dist/bootstrap-table.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -27,6 +28,7 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
     <![endif]-->
 
     <!-- Google Font -->
@@ -362,7 +364,7 @@
 <script src="static/bootstrap-table/dist/bootstrap-table.min.js"></script>
 <script src="static/bootstrap-table/dist/locale/bootstrap-table-zh-CN.min.js"></script>
 <script src="static/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-<%--<script src="static/bootstrap-datepicker/dist/locales/bootstrap-datepicker.zh-CN.min.js"></script>--%>
+<script src="static/bootstrap-datepicker/dist/locales/bootstrap-datepicker.zh-CN.min.js"></script>
 <script>
 
     $(document).ready(function(){

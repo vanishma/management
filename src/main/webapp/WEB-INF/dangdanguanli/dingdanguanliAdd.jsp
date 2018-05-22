@@ -1,9 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<style>
-    td{
-        text-align: right;
-    }
-</style>
 <div class="modal-header">
     <button type="button" class="close"
             data-dismiss="modal" aria-hidden="true">&times;
@@ -20,7 +15,7 @@
                 <div class="form-group">
                     <label class="col-sm-4 control-label">日期</label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control pull-right" name="riqi" id="datepicker">
+                        <input type="text" class="form-control pull-right" name="riqi" id="mydatepicker">
                     </div>
                 </div>
                 <div class="form-group">
@@ -123,6 +118,17 @@
 </div>
 
 <script>
+
+    $(function(){
+        $('#mydatepicker').datepicker({
+            autoclose: true,
+            todayHighlight: true,
+            language:"zh-CN", //语言设置
+            format:"yyyy-mm-dd"  //日期显示格式
+        });
+    });
+
+
     $.ajax({
         type:"post",
         url: "dealers/getAllDealers.do",
@@ -137,13 +143,6 @@
     });
 
 
-    //Date picker
-    $('#datepicker').datepicker({
-        autoclose: true,
-        todayHighlight: true,
-        language:"zh-CN", //语言设置
-        format:"yyyy-mm-dd"  //日期显示格式
-    });
     function addAPIpush() {
         if("" == $("#versions").val()){
             toastr.error("API版本号不能为空!");

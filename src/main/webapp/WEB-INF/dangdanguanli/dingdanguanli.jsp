@@ -132,12 +132,56 @@
 </script>
 <!-- 内容 -->
 <section class="content container-fluid">
-
     <div style="margin-top: 10px; margin-left: 10px;float:left;">
         <div id="toolbar">
-            <button id="add" class="btn btn-default" onclick="addDepartmentDialog();">
-                <i class="glyphicon glyphicon-plus"></i> 添加订单
-            </button>
+            <div>
+                <table>
+                    <tr>
+                        <td width="100">当天</td>
+                        <td>订单量:</td>
+                        <td width="100">6</td>
+                        <td>营业额:</td>
+                        <td width="100">240</td>
+                        <td>返现:</td>
+                        <td width="100">6</td>
+                        <td>利润</td>
+                        <td width="100">6</td>
+                    </tr>
+                    <tr>
+                        <td>全部订单</td>
+                        <td>总单量:</td>
+                        <td>6</td>
+                        <td>总营业额:</td>
+                        <td>240</td>
+                        <td>总返现:</td>
+                        <td>6</td>
+                        <td>总利润</td>
+                        <td>360</td>
+                    </tr>
+                </table>
+            </div>
+            <%--<button id="add" class="btn btn-default" onclick="addDepartmentDialog();">--%>
+                <%--<i class="glyphicon glyphicon-plus"></i> 添加订单--%>
+            <%--</button>--%>
+            <div>&nbsp;</div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="input-group">
+                      <span class="input-group-btn" >
+                          <button class="btn btn-success" type="button" onclick="addDepartmentDialog();">添加订单</button>
+                      </span>
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-success" type="button">检索</button>
+                        </span>
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+
         </div>
 
         <table id="appApktable"
