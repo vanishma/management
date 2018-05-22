@@ -10,4 +10,14 @@ public class MyAction {
     public String hello(){
         return "err";
     }
+
+    @RequestMapping("dingdanguanli")
+    public String dingdanguanli(){
+        return "dangdanguanli/dingdanguanli";
+    }
+
+    @RequestMapping("dingdanguanliAdd")
+    public String dingdanguanliAdd(){
+        return "dangdanguanli/dingdanguanliAdd";
+    }
 }

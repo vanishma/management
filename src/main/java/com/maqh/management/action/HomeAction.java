@@ -17,8 +17,8 @@ public class HomeAction {
 
         List<Object> menuList = new ArrayList<>();
         Map<String, Object> map = new HashMap<>();
-        map.put("url","/hello");
-        map.put("menuName","首页");
+        map.put("url","/dingdanguanli");
+        map.put("menuName","订单管理");
         map.put("child","1"); //1 是没有子菜单  0 是有子菜单
         menuList.add(map);
         Map<String, Object> map2 = new HashMap<>();

@@ -19,7 +19,7 @@
           page. However, you can choose any other skin. Make sure you
           apply the skin class to the body tag so the changes take effect. -->
     <link rel="stylesheet" href="static/dist/css/skins/skin-blue.min.css">
-
+    <link rel="stylesheet" href="static/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="static/bootstrap-table/dist/bootstrap-table.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -42,9 +42,9 @@
         <!-- Logo -->
         <a href="index2.html" class="logo">
             <!-- 小图标 50x50 pixels -->
-            <span class="logo-mini"><b>马</b>华</span>
+            <span class="logo-mini"><b>沐</b>妍</span>
             <!-- 展开图标 -->
-            <span class="logo-lg"><b>马</b>庆华</span>
+            <span class="logo-lg"><b>沐</b>妍</span>
         </a>
 
         <!-- Header Navbar -->
@@ -163,7 +163,7 @@
                             <!-- 用户头像-->
                             <img src="static/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                             <!-- 用户名称 -->
-                            <span class="hidden-xs">Alexander Pierce</span>
+                            <span class="hidden-xs">沐妍</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- 菜单中的用户头像 -->
@@ -171,7 +171,7 @@
                                 <img src="static/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                                 <p>
-                                    Alexander Pierce - Web Developer
+                                    沐妍- Web Developer
                                     <small>Member since Nov. 2012</small>
                                 </p>
                             </li>
@@ -220,7 +220,7 @@
                     <img src="static/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>Alexander Pierce</p>
+                    <p>沐妍</p>
                     <!-- 状态 -->
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
@@ -361,7 +361,8 @@
 
 <script src="static/bootstrap-table/dist/bootstrap-table.min.js"></script>
 <script src="static/bootstrap-table/dist/locale/bootstrap-table-zh-CN.min.js"></script>
-
+<script src="static/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<%--<script src="static/bootstrap-datepicker/dist/locales/bootstrap-datepicker.zh-CN.min.js"></script>--%>
 <script>
 
     $(document).ready(function(){
