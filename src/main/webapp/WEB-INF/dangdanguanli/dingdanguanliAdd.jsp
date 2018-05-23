@@ -129,31 +129,30 @@
     });
 
 
-    $.ajax({
-        type:"post",
-        url: "dealers/getAllDealers.do",
-        success: function(data){
-            var dataobj = eval("("+data+")");
-            var temp ="";
-            for(var i=0;i<dataobj.length;i++){
-                temp +="<input type='checkbox' id='check"+i+"' name='dealers' value='"+dataobj[i].id+"'><label for='check"+i+"'>"+dataobj[i].dealers_name+"</label>&nbsp;&nbsp;&nbsp;&nbsp;";
-            }
-            $("#jxs").html(temp);
-        }
-    });
+    // $.ajax({
+    //     type:"post",
+    //     url: "dealers/getAllDealers.do",
+    //     success: function(data){
+    //         var dataobj = eval("("+data+")");
+    //         var temp ="";
+    //         for(var i=0;i<dataobj.length;i++){
+    //             temp +="<input type='checkbox' id='check"+i+"' name='dealers' value='"+dataobj[i].id+"'><label for='check"+i+"'>"+dataobj[i].dealers_name+"</label>&nbsp;&nbsp;&nbsp;&nbsp;";
+    //         }
+    //         $("#jxs").html(temp);
+    //     }
+    // });
 
 
     function addAPIpush() {
-        if("" == $("#versions").val()){
-            toastr.error("API版本号不能为空!");
-            return;
-        }
-        if("" == $("#update_content").val()){
-            toastr.error("更新内容不能为空!");
-            return;
-        }
-        $("#addAPI").submit();
-        $("#addAPIApk").modal('hide');
-        $("#updateAPIApk").bootstrapTable('refresh');
+        $.ajax({
+            type:"post",
+            url: "addDingDan",
+            data: $("#addAPI").serialize(),
+            success: function(data){
+                $("#addapp").modal('hide');
+                $("#addapp").bootstrapTable('refresh');
+            }
+        })
+
     }
 </script>
