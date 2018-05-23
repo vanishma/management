@@ -365,6 +365,8 @@
 <script src="static/bootstrap-table/dist/locale/bootstrap-table-zh-CN.min.js"></script>
 <script src="static/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <script src="static/bootstrap-datepicker/dist/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+<script src="static/bootstrap/umd/bootbox.js"></script>
+
 <script>
 
     $(document).ready(function(){
