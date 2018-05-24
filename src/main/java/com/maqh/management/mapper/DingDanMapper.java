@@ -48,10 +48,10 @@ public interface DingDanMapper {
     @Delete("delete from dingdan where id = #{id}")
     void delDingDan(@Param("id") String id);
 
-    @Select("SELECT COUNT(id) AS zcount,SUM(lirun) AS lirun,SUM(zhongjia) AS zhongjia,SUM(fanxian) AS fanxian FROM dingdan WHERE shouhou ='否'")
+    @Select("SELECT COUNT(id) AS zcount,CAST(SUM(lirun) AS DECIMAL (19,2) )AS lirun,CAST(SUM(zhongjia)AS DECIMAL (19,2)  )AS zhongjia,CAST(SUM(fanxian) AS DECIMAL (19,2)) AS fanxian FROM dingdan   WHERE shouhou ='否'")
     Map<String,Object> sumAll();
 
-    @Select("SELECT COUNT(id) AS zcount,SUM(lirun) AS lirun,SUM(zhongjia) AS zhongjia,SUM(fanxian) AS fanxian  FROM (" +
+    @Select("SELECT COUNT(id) AS zcount,CAST(SUM(lirun) AS DECIMAL (19,2) )AS lirun,CAST(SUM(zhongjia)AS DECIMAL (19,2)  )AS zhongjia,CAST(SUM(fanxian) AS DECIMAL (19,2)) AS fanxian   FROM (" +
             "SELECT *FROM dingdan WHERE  shouhou ='否')  a " +
             "WHERE a.riqi LIKE CONCAT(CONCAT(\"%\",#{sousuo}),\"%\") OR a.chanpin LIKE  concat(concat(\"%\",#{sousuo}),\"%\") OR a.xingming LIKE  concat(concat(\"%\",#{sousuo}),\"%\") ")
     Map<String,Object> sumWhere(@Param("sousuo") String sousuo);

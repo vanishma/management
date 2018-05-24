@@ -10,7 +10,21 @@
         <%--<li class="active">Here</li>--%>
     <%--</ol>--%>
 </section>
+<style>
+    table{
+        table-layout:fixed;
+    }
+
+    table tbody tr td{
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+    }
+</style>
+<label></label>
 <script>
+
+    queryNow();
     var $table = $('#appApktable');
     $('#appApktable').bootstrapTable({
         url: '/getDingDan',
@@ -20,80 +34,88 @@
             field: 'riqi',
             title: '日期',
             align:'center',
-            width: 300
+            width: '5%'
         } ,{
             field: 'chanpin',
             title: '产品',
             align:'center',
-            width: 400
+            width: '8%',
+            formatter:function(value,row,index){
+                var e = '<label data-toggle=\"tooltip\" data-placement=\"left\" title=\"'+row.chanpin+'\">'+row.chanpin+'</label>';
+                return e;
+            }
         } ,{
             field: 'guige',
             title: '规格',
             align:'center',
-            width: 400
+            width: '5%'
         } ,{
             field: 'tuangoujia',
             title: '团购价',
             align:'center',
-            width: 400
+            width: '5%'
         } ,{
             field: 'tuangoushulaing',
             title: '团购数量',
             align:'center',
-            width: 400
+            width: '5%'
         } ,{
             field: 'zhongjia',
             title: '总价',
             align:'center',
-            width: 400
+            width: '5%'
         } ,{
             field: 'fenxiaojia',
             title: '分销价',
             align:'center',
-            width: 400
+            width: '5%'
         } ,{
             field: 'fanxian',
             title: '返现',
             align:'center',
-            width: 400
+            width: '5%'
         } ,{
             field: 'lirun',
             title: '利润',
             align:'center',
-            width: 400
+            width: '5%'
         } ,{
             field: 'xingming',
             title: '姓名',
             align:'center',
-            width: 400
+            width: '5%'
         } ,{
             field: 'dianhua',
             title: '电话',
             align:'center',
-            width: 400
+            width: '6%'
         } ,{
             field: 'dizhi',
             title: '地址',
             align:'center',
-            width: 400
+            width: '10%',
+            formatter:function(value,row,index){
+                var e = '<label data-toggle=\"tooltip\" data-placement=\"left\" title=\"'+row.dizhi+'\">'+row.dizhi+'</label>';
+                return e;
+            }
         } ,{
             field: 'kuaidi',
             title: '快递',
             align:'center',
-            width: 400
+            width: '8%'
         } ,{
             field: 'shifoudaohuo',
             title: '是否到货',
             align:'center',
-            width: 400
+            width: '5%'
         } ,{
             field: 'shouhou',
             title: '售后',
             align:'center',
-            width: 400
+            width: '5%'
         } ,{
             title:'操作',
-            width: 250,
+            width: '5%',
             align:'center',
             formatter:function(value,row,index){
                 var e = '<a href="#" mce_href="#" onclick="edit(\''+ row.id + '\');">编辑</a> ';
@@ -227,6 +249,7 @@
                data-detail-formatter="operateFormatter"
                data-events="operateEvents"
                data-page-list="[5, 10, 20, 50, 100, 200]"
+               data-striped ="true"
         >
         </table>
         <div style="margin-bottom: 50px;"></div>
@@ -250,3 +273,7 @@
 
 
 </section>
+
+<script>
+    $(".tooltips").tooltip();
+</script>

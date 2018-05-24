@@ -95,8 +95,12 @@ public class DingdanService {
 
         if(wheremap != null){
             map.putAll(wheremap);
+        }else{
+            map.put("zcount", "0");
+            map.put("fanxian", "0");
+            map.put("zhongjia", "0");
+            map.put("lirun", "0");
         }
-
         return map;
     }
 }
